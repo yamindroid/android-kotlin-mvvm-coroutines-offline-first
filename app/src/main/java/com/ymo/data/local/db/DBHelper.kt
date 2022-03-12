@@ -8,7 +8,4 @@ interface DBHelper {
     suspend fun getUpcomingDBMovies(): List<MovieItem>
     suspend fun deleteMovieItemById(id: Int): Int
     suspend fun addMovieItem(movieItem: MovieItem)
-    suspend fun insertAllMovieItems(movieItems: List<MovieItem?>?)
-    suspend fun updateMovie(movieItem: MovieItem)
-    suspend fun deleteAllMovieItems()
 }

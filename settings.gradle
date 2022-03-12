@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "kotlin-base-android"
+rootProject.name = "android-kotlin-mvvm-coroutines-offline-first"

@@ -15,9 +15,4 @@ class DBHelperImpl @Inject constructor(
 
     override suspend fun deleteMovieItemById(id: Int): Int =
         appDatabase.movieDao().deleteMovieItemById(id)
-
-    override suspend fun updateMovie(movieItem: MovieItem) = appDatabase.movieDao().updateMovie(movieItem)
-    override suspend fun deleteAllMovieItems() = appDatabase.movieDao().deleteAllMovieItems()
-
-    override suspend fun insertAllMovieItems(movieItems: List<MovieItem?>?)=appDatabase.movieDao().insertAllMovieItems(movieItems)
 }

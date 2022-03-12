@@ -55,12 +55,6 @@ class DataRepositoryImpl @Inject constructor(
     override suspend fun getUpcomingDBMovies(): List<MovieItem> = dbHelper.getUpcomingDBMovies()
 
     override suspend fun addMovieItem(movieItem: MovieItem) = dbHelper.addMovieItem(movieItem)
-    override suspend fun insertAllMovieItems(movieItems: List<MovieItem?>?) =
-        dbHelper.insertAllMovieItems(movieItems)
-
-    override suspend fun updateMovie(movieItem: MovieItem) = dbHelper.updateMovie(movieItem)
-
-    override suspend fun deleteAllMovieItems() = dbHelper.deleteAllMovieItems()
 
     override suspend fun deleteMovieItemById(id: Int) = dbHelper.deleteMovieItemById(id)
 

@@ -65,7 +65,7 @@ data class MovieItem(
     val voteAverage: Double? = null,
 
     @field:SerializedName("id")
-    @PrimaryKey val id: Int,
+    @PrimaryKey var id: Int,
 
     @field:SerializedName("adult")
     val adult: Boolean? = null,
@@ -92,12 +92,12 @@ data class Dates(
 class IntTypeConverter {
 
     @TypeConverter
-    fun saveIntList(list: List<Int>): String? {
+    fun saveIntList(list: List<Int?>?): String? {
         return Gson().toJson(list)
     }
 
     @TypeConverter
-    fun getIntList(list: String): List<Int> {
+    fun getIntList(list: String?): List<Int> {
         return Gson().fromJson(
             list.toString(),
             object : TypeToken<List<Int?>?>() {}.type

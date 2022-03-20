@@ -7,7 +7,7 @@ object TestUtil {
 
     fun createMovie(id: Int) = MovieItem(
         id = id,
-        title = "",
+        title = "Movie 1"
     )
 
     fun makeUpcomingMovieList(size: Int): MutableList<MovieItem> {
